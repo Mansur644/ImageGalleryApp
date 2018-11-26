@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ImageDetailActivity">
+    <include
+        android:id="@+id/toolbar1"
+        layout="@layout/tool_bar"/>
+
+    <ImageView
+        android:id="@+id/img_roatate"
+        android:layout_width="@dimen/dimens_50dp"
+        android:layout_height="@dimen/dimens_50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dimens_20dp"
+        android:onClick="imgRotate"
+        android:layout_below="@+id/toolbar1"
+        android:src="@drawable/img" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/colorBlack"
+        android:text="Click to rotate below image"
+        android:layout_below="@+id/img_roatate"
+        android:fontFamily="sans-serif"
+        android:layout_marginTop="@dimen/dimens_3dp"/>
+
+    <FrameLayout
+        android:id="@+id/layout_frame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="@dimen/dimens_5dp"
+        android:layout_marginRight="@dimen/dimens_5dp"
+        android:layout_marginBottom="@dimen/dimens_20dp">
+
+        <ImageView
+            android:id="@+id/detail_activity_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/detail_activity_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_frame"
+        android:fontFamily="sans-serif"
+        android:gravity="center"
+        android:text="Title"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/dimens_20dp"
+        android:textStyle="italic" />
+
+
+</RelativeLayout>
